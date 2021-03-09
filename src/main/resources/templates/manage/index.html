@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<base href="../manage/" />
+		<meta charset="utf-8">
+		<title>学习资源管理系统</title>
+		<meta name="description" content="Bootstrap Metro Dashboard">
+		<meta name="author" content="Dennis Ji">
+		<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+
+		<!-- 防止字符变形对手机端的适配 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+		<!-- bootstrap和 easyUI的css引用-->
+		<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link id="base-style" href="css/style.css" rel="stylesheet">
+		<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css">
+
+
+		<!-- start: Favicon -->
+		<link rel="shortcut icon" href="img/avatar.jpg">
+		<!-- end: Favicon -->
+
+		<!-- 相关js的依赖-->
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="js/easyui/jquery.min.js"></script>
+		<script type="text/javascript" src="js/easyui/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="js/easyui/datagrid-detailview.js"></script>
+		<script type="text/javascript" src="js/easyui/locale/easyui-lang-zh_CN.js"></script>
+		<!-- 自定义js -->
+		<script type="text/javascript" src="js/jquery.common.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.js"></script>
+
+		<script type="text/javascript" src="js/index.js"></script>
+		<style>
+			.manualBtn {
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="cc" class="easyui-layout" data-options="fit:true">
+			<div data-options="region:'west',title:'菜单',split:true" style="width:20%;">
+				<!-- <a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">easyui</a> -->
+				<a href="/manage/addManage" class="easyui-linkbutton manualBtn">广告管理</a>
+				<a id="btn2" href="/manage/labelManage" class="easyui-linkbutton manualBtn">标签管理</a>
+				<a id="btn3" href="/manage/courseManage" class="easyui-linkbutton manualBtn">课程资源管理</a>
+				<a id="btn4" href="/manage/userManage" class="easyui-linkbutton manualBtn">用户管理</a>
+			</div>
+			<div data-options="region:'center',title:'学习资源管理系统'" style="padding:5px;background:#eee;">
+				<div id="showPanel" class="easyui-tabs" data-options="fit:true">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

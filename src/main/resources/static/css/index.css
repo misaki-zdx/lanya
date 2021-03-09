@@ -1,0 +1,174 @@
+.navbar-brand {
+	color: #28ABE3 !important;
+}
+
+#loginbtn {
+	color: #28ABE3 !important;
+}
+
+body {
+	background: #F8F8F8;
+}
+
+.main {
+	width: 100%;
+	height: auto;
+}
+
+.main-left {
+	width: 75%;
+	float: left;
+	min-height: 1000px;
+}
+
+.main-right {
+	width: 25%;
+	float: left;
+	min-height: 1000px;
+}
+
+.main-right img {
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+
+.main-left img {
+	width: 100%;
+}
+
+
+.tagContent {
+	margin: 10px;
+	background: white;
+	min-height: 300px;
+}
+
+.tagTitle {
+	line-height: 40px;
+	border-bottom: 1px solid #efefef;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.tags {
+	padding: 10px;
+}
+
+.tags span {
+	display: inline-block;
+	font-size: 11px;
+	padding: 6px 10px;
+	min-width: 60px;
+	margin: 5px 3px;
+	border: 1px solid #efefef;
+	cursor: pointer;
+	border-radius: 14px;
+	text-align: center;
+}
+
+.tag:hover {
+	color: #28ABE3;
+	border: 1px solid #28ABE3;
+}
+
+footer {
+	min-height: 300px;
+	background: #2D2D2D;
+	color: #28ABE3;
+	clear: both;
+	text-align: center;
+}
+
+#footer-left {
+	color: gray;
+	padding-top: 30px;
+	padding-left: 20px;
+	text-align: left;
+}
+
+#footer-left p {
+	padding-bottom: 15px;
+	color: #aaa;
+}
+
+#footer-center {
+	padding: 20px 0px;
+}
+
+#footer-right {
+	padding-top: 30px;
+}
+
+#footer-right a {
+	text-decoration: none !important;
+	line-height: 33px;
+}
+
+#footer-right a:hover {
+	cursor: pointer;
+}
+
+#footer-top {
+	border-bottom: solid 1px #444;
+}
+
+#footer-end {
+	min-height: 50px;
+	line-height: 50px;
+}
+
+#main-left-content {
+	margin-top: 15px;
+}
+
+.main-left-content-item {
+	margin-bottom: 15px;
+	background: white;
+	box-shadow: 3px 3px 5px #888888;
+	margin-left: 15px;
+	margin-right: 10px;
+}
+
+.main-left-content-item:hover {
+	box-shadow: 5px 5px 7px #888888;
+	transition: all 0.2s 0s ease-in;
+}
+
+
+.main-left-content-item h4 {
+	padding-top: 5px;
+	display: inline-block;
+	width: 100%;
+}
+
+.main-left-content-item p {
+	text-indent: 2em;
+}
+
+.main-left-content-item span {
+	margin-left: 30%;
+}
+
+.main-left-content-item img {
+	min-height: 150px;
+	padding: 10px 0px;
+}
+
+
+
+/* 这玩意得放在元素声明之下 */
+@media screen and (max-width: 1000px) {
+	.main-right {
+		display: none;
+	}
+
+	.main-left {
+		width: 100%;
+	}
+	#footer-left{
+		text-align: center;
+	}
+
+}

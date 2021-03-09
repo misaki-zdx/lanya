@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<context id="testTables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+		</commentGenerator>
+		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://49.235.56.46/lanya?useSSL=false" userId="root"
+			password="Xiaoming250%">
+		</jdbcConnection>
+
+		<!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和 
+			NUMERIC 类型解析为java.math.BigDecimal -->
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- targetProject:生成PO类的位置 -->
+		<javaModelGenerator targetPackage="com.nwl.lanya.po"
+			targetProject="./src/main/java">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+			<!-- 从数据库返回的值被清理前后的空格 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+        <!-- targetProject:mapper映射文件生成的位置 -->
+		<sqlMapGenerator targetPackage="com.nwl.lanya.dao" 
+			targetProject="./src/main/java">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+		<!-- targetPackage：mapper接口生成的位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.nwl.lanya.dao" 
+			targetProject="./src/main/java">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		
+		<!-- 指定数据库表 -->
+		<!--  
+		<table tableName="account"></table>
+		<table tableName="account_role"></table>
+		<table tableName="comment"></table>
+		<table tableName="company"></table>
+		<table tableName="company_student"></table>
+		<table tableName="course"></table>
+		<table tableName="course_collection"></table>
+		<table tableName="course_system"></table>
+		<table tableName="course_system_collection"></table>
+		<table tableName="hr"></table>
+		<table tableName="my_teacher"></table>
+		<table tableName="my_teacher_talk"></table>
+		<table tableName="my_tribe"></table>
+		<table tableName="my_tribe_talk"></table>
+		<table tableName="my_work"></table>
+		<table tableName="my_work_talk"></table>
+		<table tableName="role"></table>
+		<table tableName="role_right"></table>
+		<table tableName="stage"></table>
+		<table tableName="course_type"></table>
+		<table tableName="student"></table>
+		<table tableName="sys_right"></table>
+		<table tableName="teacher"></table>
+		<table tableName="tribes"></table>
+		<table tableName="video_audio"></table>
+		<table tableName="video_audio_collection"></table>
+		<table tableName="wallet"></table>
+		<table tableName="wallet_detail"></table>
+		<table tableName="work_list"></table>
+		-->
+<!--		<table tableName="addmanage"></table>-->
+<!--		<table tableName="course"></table>-->
+<!--		<table tableName="label_course"></table>-->
+		<table tableName="label_info"></table>
+<!--		<table tableName="user"></table>-->
+	</context>
+</generatorConfiguration>

@@ -1,0 +1,30 @@
+h3{
+	text-align: center;
+	color: white;
+	margin: 40px 10px;
+}
+
+h1{
+	color: white;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.localLoginForm{
+	padding-left: 55px;
+	padding-right: 50px;;
+}
+
+#loginmain-form{
+	width:70%;
+	margin:auto;
+	min-height:460px;
+	background: rgba(0,0,0,0.6);
+}
+
+.localLoginBtn{
+	margin-top: 30px;
+}
+
+.localBtnClass{
+	width: 80px;
+}
