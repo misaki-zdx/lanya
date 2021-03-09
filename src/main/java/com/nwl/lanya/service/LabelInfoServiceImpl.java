@@ -1,11 +1,8 @@
 package com.nwl.lanya.service;
 
 import com.nwl.lanya.dao.LabelInfoMapper;
-import com.nwl.lanya.dto.AbstractBaseDto;
 import com.nwl.lanya.dto.LabelInfoDto;
-import com.nwl.lanya.po.Addmanage;
 import com.nwl.lanya.po.LabelInfo;
-import com.sun.tools.javac.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

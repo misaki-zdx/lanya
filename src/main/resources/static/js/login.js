@@ -7,7 +7,7 @@ $(function() {
 			validating: 'glyphicon glyphicon-refresh'
 		},
 		fields: {
-			"email": {
+			"po.email": {
 				message: '邮箱校验失败',
 				validators: {
 					notEmpty: {
@@ -19,7 +19,7 @@ $(function() {
 					}
 				}
 			},
-			"password": {
+			"po.pwd": {
 				message: '密码校验失败',
 				validators: {
 					notEmpty: {
@@ -36,6 +36,8 @@ $(function() {
 		e.preventDefault();
 		var $form = $(e.target);
 		var bv = $form.data('bootstrapValidator');
+		var md5Str1 = $.md5($("#loginPwd").val());
+		$("#loginPwd").val(md5Str1);
 		e.target.submit();
 	});
 
@@ -47,7 +49,7 @@ $(function() {
 			validating: 'glyphicon glyphicon-refresh'
 		},
 		fields: {
-			"email": {
+			"po.email": {
 				message: '邮箱校验失败',
 				validators: {
 					notEmpty: {
@@ -59,7 +61,7 @@ $(function() {
 					}
 				}
 			},
-			"password": {
+			"po.pwd": {
 				message: '密码校验失败',
 				validators: {
 					notEmpty: {
@@ -71,7 +73,7 @@ $(function() {
 					}
 				}
 			},
-			"confirmPassword": {
+			"confirmPwd": {
 				message: '密码校验失败',
 				validators: {
 					notEmpty: {
@@ -82,11 +84,11 @@ $(function() {
 						message: '密码包含字母、数字及特殊字符，8位以上'
 					},
 					identical: {
-						field: 'password',
+						field: 'po.pwd',
 						message: '两次输入不一致'
 					},
 					different: {
-						field: 'email',
+						field: 'pw.email',
 						message: '密码不能和邮箱一样'
 					}
 				}
@@ -96,6 +98,10 @@ $(function() {
 		e.preventDefault();
 		var $form = $(e.target);
 		var bv = $form.data('bootstrapValidator');
+		var md5Str1 = $.md5($("#registerPwd").val());
+		$("#registerPwd").val(md5Str1);
+		var md5Str2 = $.md5($("#confirmPwd").val());
+		$("#confirmPwd").val(md5Str2);
 		e.target.submit();
-	});;
+	});
 });

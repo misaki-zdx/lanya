@@ -117,4 +117,11 @@ public interface UserMapper {
      * @mbg.generated Thu Mar 04 10:08:32 CST 2021
      */
     int updateByPrimaryKey(User record);
+
+    /**
+     * 用户登录检查
+     * @param po usr
+     * @return 用户是否能被查询到
+     */
+    List<User> logOn(User po);
 }

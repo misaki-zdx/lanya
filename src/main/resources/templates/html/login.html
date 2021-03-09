@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <base href="../"/>
     <meta charset="utf-8">
@@ -34,15 +36,15 @@
             <div class="row">
                 <div class="col-md-6 localLoginForm">
                     <h1>登录</h1>
-                    <form id="loginForm">
+                    <form id="loginForm" action="/logOn" method="post">
                         <div class="form-group">
                             <!-- <label for="exampleInputEmail1">Email address</label> -->
-                            <input type="email" class="form-control" id="exampleInputEmail1" name="email"
+                            <input type="email" class="form-control" id="exampleInputEmail1" name="po.email"
                                    placeholder="请输入你的邮箱">
                         </div>
                         <div class="form-group">
                             <!-- <label for="exampleInputPassword1">Password</label> -->
-                            <input id="loginPwd" type="password" class="form-control" name="password"
+                            <input id="loginPwd" type="password" class="form-control" name="po.pwd"
                                    placeholder="请输入你的密码">
                         </div>
                         <!-- <div class="form-group">
@@ -62,20 +64,20 @@
                 </div>
                 <div class="col-md-6 localLoginForm">
                     <h1>注册</h1>
-                    <form id="registerForm">
+                    <form id="registerForm" action="/register" method="post">
                         <div class="form-group">
                             <!-- <label for="exampleInputEmail1">Email address</label> -->
-                            <input type="email" class="form-control" id="registerInputEmail" name="email"
+                            <input type="email" class="form-control" id="registerInputEmail" name="po.email"
                                    placeholder="请输入你的邮箱">
                         </div>
                         <div class="form-group">
                             <!-- <label for="exampleInputPassword1">Password</label> -->
-                            <input id="registerPwd" type="password" class="form-control" name="password"
+                            <input id="registerPwd" type="password" class="form-control" name="po.pwd"
                                    placeholder="请输入你的密码">
                         </div>
                         <div class="form-group">
                             <!-- <label for="exampleInputPassword1">Password</label> -->
-                            <input id="confirmPwd" type="password" class="form-control" name="conRfirmPassword"
+                            <input id="confirmPwd" type="password" class="form-control" name="confirmPwd"
                                    placeholder="请确认你的密码">
                         </div>
                         <!-- <div class="form-group">
@@ -96,6 +98,10 @@
             </div>
         </div>
     </div>
+</div>
+<!-- 用于返回服务器的相关提醒 -->
+<div th:if="${msgCode==2}" id="errorMsg">
+    <span th:text="${msg}"></span>
 </div>
 </body>
 </html>

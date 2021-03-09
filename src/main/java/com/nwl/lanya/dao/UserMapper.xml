@@ -106,6 +106,12 @@
     -->
     pwd
   </sql>
+
+  <select id="logOn" parameterType="com.nwl.lanya.po.User" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+        from user where email = "${email}"
+  </select>
+
   <select id="selectByExampleWithBLOBs" parameterType="com.nwl.lanya.po.UserExample" resultMap="ResultMapWithBLOBs">
     <!--
       WARNING - @mbg.generated
